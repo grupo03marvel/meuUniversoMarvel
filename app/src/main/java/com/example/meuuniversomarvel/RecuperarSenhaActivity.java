@@ -2,14 +2,16 @@ package com.example.meuuniversomarvel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-public class Cadastro_Activity extends AppCompatActivity {
+public class RecuperarSenhaActivity extends AppCompatActivity {
     Button btnRecuperar;
     TextInputLayout email;
 
@@ -39,7 +41,7 @@ public class Cadastro_Activity extends AppCompatActivity {
 
                 if (!endemail.isEmpty() ){
                     //Criando uma nova instancia do tipo Intent
-                    Intent intent = new Intent(Cadastro_Activity.this,Recuperar_SenhaEmail.class);
+                    Intent intent = new Intent(RecuperarSenhaActivity.this, RecuperarSenhaEmailActivity.class);
 
                     //Criando uma nova instancia do bundle
                     Bundle bundle = new Bundle();
@@ -49,6 +51,15 @@ public class Cadastro_Activity extends AppCompatActivity {
 
 
                     intent.putExtras(bundle);
+
+                    //toast
+                    Context context = getApplicationContext();
+                    CharSequence text = "Instruções enviada para o email!";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+
+
                     //Passo a intent para a startActivity
                     startActivity(intent);
 

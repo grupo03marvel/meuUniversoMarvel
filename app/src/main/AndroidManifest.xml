@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Recuperar_SenhaEmail"
+            android:name=".RecuperarSenhaEmailActivity"
             android:label="@string/title_activity_recuperar__senha_email"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Cadastro_Activity" />
+        <activity android:name=".RecuperarSenhaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

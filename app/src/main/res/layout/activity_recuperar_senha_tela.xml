@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E1001D"
     android:backgroundTint="#E1001D"
-    tools:context=".Cadastro_Activity">
+    tools:context=".RecuperarSenhaActivity">
 
 
     <TextView

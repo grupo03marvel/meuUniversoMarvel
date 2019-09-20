@@ -10,7 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-public class Recuperar_SenhaEmail extends AppCompatActivity {
+public class RecuperarSenhaEmailActivity extends AppCompatActivity {
 
 //    TextView nome;
 //    TextView telefone;
@@ -48,4 +48,4 @@ public class Recuperar_SenhaEmail extends AppCompatActivity {
 
     }
 
-}
+
