@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MeuUniversoMarvel</string>
+    <string name="title_activity_recuperar__senha_email">Recuperar_SenhaEmail</string>
 </resources>
