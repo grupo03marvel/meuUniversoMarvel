@@ -1,4 +1,4 @@
-package com.example.meuuniversomarvel;
+package com.example.meuuniversomarvel.views;
 
 import android.os.Bundle;
 
