@@ -18,7 +18,7 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="navIconColors" parent="AppTheme">
-        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="android:textColorSecondary">@color/cor_Branco</item>
     </style>
 
 </resources>

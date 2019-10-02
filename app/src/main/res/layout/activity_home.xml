@@ -14,8 +14,7 @@
         android:background="@color/vermelho"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/navIconColors">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -23,7 +22,7 @@
             app:navigationIcon="@drawable/ic_menu"
             app:menu="@menu/menu_main"
             app:title="Nome Tela"
-            style="@style/navIconColors">
+            app:titleTextColor="#ffffff">
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
