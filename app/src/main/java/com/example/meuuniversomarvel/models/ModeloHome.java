@@ -5,16 +5,19 @@ import android.os.Parcelable;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class ModeloHome implements Parcelable {
     private String nomePagina;
     private int imagemCategoria;
-    private RecyclerView categorias;
+    private List<ItemHome> listaItensHome;
 
     //construtor
 
-    public ModeloHome(int imagemCategoria, RecyclerView categorias) {
+    public ModeloHome(String nomePagina, int imagemCategoria, List<ItemHome> listaItensHome) {
+        this.nomePagina = nomePagina;
         this.imagemCategoria = imagemCategoria;
-        this.categorias = categorias;
+        this.listaItensHome = listaItensHome;
     }
 
     public ModeloHome() {
@@ -22,21 +25,22 @@ public class ModeloHome implements Parcelable {
 
     //getters and setters
 
-    public int getImagemCategoria() {
-        return imagemCategoria;
+    protected ModeloHome(Parcel in) {
+        nomePagina = in.readString();
+        imagemCategoria = in.readInt();
     }
 
-    public void setImagemCategoria(int imagemCategoria) {
-        this.imagemCategoria = imagemCategoria;
-    }
+    public static final Creator<ModeloHome> CREATOR = new Creator<ModeloHome>() {
+        @Override
+        public ModeloHome createFromParcel(Parcel in) {
+            return new ModeloHome(in);
+        }
 
-    public RecyclerView getCategorias() {
-        return categorias;
-    }
-
-    public void setCategorias(RecyclerView categorias) {
-        this.categorias = categorias;
-    }
+        @Override
+        public ModeloHome[] newArray(int size) {
+            return new ModeloHome[size];
+        }
+    };
 
     public String getNomePagina() {
         return nomePagina;
@@ -46,6 +50,22 @@ public class ModeloHome implements Parcelable {
         this.nomePagina = nomePagina;
     }
 
+    public int getImagemCategoria() {
+        return imagemCategoria;
+    }
+
+    public void setImagemCategoria(int imagemCategoria) {
+        this.imagemCategoria = imagemCategoria;
+    }
+
+    public List<ItemHome> getListaItensHome() {
+        return listaItensHome;
+    }
+
+    public void setListaItensHome(List<ItemHome> listaItensHome) {
+        this.listaItensHome = listaItensHome;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -53,7 +73,8 @@ public class ModeloHome implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(imagemCategoria);
         dest.writeString(nomePagina);
+        dest.writeInt(imagemCategoria);
+        dest.writeList(listaItensHome);
     }
 }

@@ -12,8 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.meuuniversomarvel.models.ItemHome;
 import com.example.meuuniversomarvel.models.ModeloHome;
 import com.example.meuuniversomarvel.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.example.meuuniversomarvel.views.HomeActivity.MH_KEY;
 
@@ -22,8 +26,9 @@ import static com.example.meuuniversomarvel.views.HomeActivity.MH_KEY;
  * A simple {@link Fragment} subclass.
  */
 public class CategoriaFragment extends Fragment {
+    private String nomePagina;
     private ImageView imagemCategoria;
-    private RecyclerView recyclerItensCat;
+    //private List<ItemHome> listaItensHome;
 
     public CategoriaFragment() {
         // Required empty public constructor
@@ -36,7 +41,6 @@ public class CategoriaFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_categoria, container, false);
         initViews(view);
-        //remover commit quando arrumar o modelo, ainda falta fazer alguns ajustes na classe modelo também
 //        if(!getArguments().isEmpty()){
 //            ModeloHome modeloHome = getArguments().getParcelable(MH_KEY);
 //
@@ -46,8 +50,8 @@ public class CategoriaFragment extends Fragment {
 //
 //                imagemCategoria.setImageDrawable(drawable);
 //
-//                //dúvida
-//                //recyclerItensCat.setRecycledViewPool();
+//
+//
 //
 //            }
 //
@@ -59,7 +63,8 @@ public class CategoriaFragment extends Fragment {
     }
 
     public void initViews(View view){
+        //nomePagina como não é um item do XML precisa ser declarado?
         imagemCategoria = view.findViewById(R.id.imagemCategoria);
-        recyclerItensCat = view.findViewById(R.id.recyclerItensCat);
+        // = view.findViewById(R.id.recyclerItensCat);
     }
 }
