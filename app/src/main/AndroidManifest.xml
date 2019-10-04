@@ -11,12 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< Updated upstream
         <activity android:name=".SobreActivity"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".CadastroActivity" />
         <activity android:name=".RecuperarSenhaActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".splashActivity">
+=======
+        <activity android:name=".views.InfoContainer"></activity>
+        <activity android:name=".views.SobreActivity" />
+        <activity android:name=".views.HomeActivity" />
+        <activity android:name=".views.CadastroActivity" />
+        <activity android:name=".views.RecuperarSenhaActivity" />
+        <activity android:name=".views.LoginActivity" />
+        <activity android:name=".views.splashActivity">
+>>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
