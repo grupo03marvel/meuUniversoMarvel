@@ -66,7 +66,41 @@ public class NavigationActivity extends AppCompatActivity {
 
                 if(id == R.id.nav_quadrinhos){
                     //replaceFragment(new fragmento());
+                    //ModelItemHome quadrinhos = new ModelItemHome("Quadrinhos", R.drawable.quadrinhos,popularLista());
                 }
+
+                if(id == R.id.nav_personagens){
+
+
+                }
+
+                if(id == R.id.nav_autores){
+
+                }
+
+                if(id == R.id.nav_series){
+
+                }
+
+                if(id == R.id.nav_favoritos){
+
+                }
+
+                if(id == R.id.nav_login){
+
+                }
+
+                if(id == R.id.nav_sobre){
+
+                }
+
+                if(id == R.id.nav_logout){
+
+                }
+
+
+
+                
 
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
