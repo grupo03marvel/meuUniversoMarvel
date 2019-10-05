@@ -30,21 +30,18 @@ public class HomeActivity extends AppCompatActivity implements Comunicador {
     private ItemAdapter adapter;
     private List<ItemHome> listaItens = new ArrayList<>();
     public static final String MH_KEY = "modeloHome";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        recyclerView = findViewById(R.id.recyclerItensCat);
 
-        adapter = new ItemAdapter(popularLista());
+        ModeloHome modeloHome = new ModeloHome("Fragment", R.drawable.autores, popularLista());
+        setBundleToFragment(modeloHome, MH_KEY);
 
-        GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 3);
-
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(linearLayoutManager);
-
-        replaceFragment(R.id.container, new CategoriaFragment());
+        //replaceFragment(R.id.container, new CategoriaFragment());
     }
+
 
     public List<ItemHome> popularLista(){
         listaItens.add(new ItemHome(R.drawable.hq3, "Shrek"));
@@ -53,7 +50,6 @@ public class HomeActivity extends AppCompatActivity implements Comunicador {
 
         return listaItens;
     }
-
 
     @Override
     public void receberMensagem(ModeloHome modeloHome) {

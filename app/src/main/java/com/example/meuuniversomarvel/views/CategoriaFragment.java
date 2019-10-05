@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.meuuniversomarvel.adapters.ItemAdapter;
 import com.example.meuuniversomarvel.models.ItemHome;
 import com.example.meuuniversomarvel.models.ModeloHome;
 import com.example.meuuniversomarvel.R;
@@ -28,7 +30,9 @@ import static com.example.meuuniversomarvel.views.HomeActivity.MH_KEY;
 public class CategoriaFragment extends Fragment {
     private String nomePagina;
     private ImageView imagemCategoria;
-    //private List<ItemHome> listaItensHome;
+    private List<ItemHome> listaItens;
+    private ItemAdapter adapter;
+    private RecyclerView recyclerView;
 
     public CategoriaFragment() {
         // Required empty public constructor
@@ -41,21 +45,30 @@ public class CategoriaFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_categoria, container, false);
         initViews(view);
-//        if(!getArguments().isEmpty()){
-//            ModeloHome modeloHome = getArguments().getParcelable(MH_KEY);
-//
-//            if(modeloHome != null){
-//
-//                Drawable drawable = getResources().getDrawable(modeloHome.getImagemCategoria());
-//
-//                imagemCategoria.setImageDrawable(drawable);
-//
-//
-//
-//
-//            }
-//
-//        }
+
+        if(getArguments() != null){
+            ModeloHome modeloHome = getArguments().getParcelable(MH_KEY);
+
+            if(modeloHome != null){
+
+                Drawable drawable = getResources().getDrawable(modeloHome.getImagemCategoria());
+
+                imagemCategoria.setImageDrawable(drawable);
+
+                List<ItemHome> itemHomeLists = new ArrayList<>();
+
+                itemHomeLists = modeloHome.getListaItensHome();
+
+                adapter = new ItemAdapter(itemHomeLists);
+
+                GridLayoutManager linearLayoutManager = new GridLayoutManager(getContext(), 3);
+
+                recyclerView.setAdapter(adapter);
+                recyclerView.setLayoutManager(linearLayoutManager);
+
+            }
+
+        }
 
 
 
@@ -65,6 +78,14 @@ public class CategoriaFragment extends Fragment {
     public void initViews(View view){
         //nomePagina como não é um item do XML precisa ser declarado?
         imagemCategoria = view.findViewById(R.id.imagemCategoria);
-        // = view.findViewById(R.id.recyclerItensCat);
+        recyclerView = view.findViewById(R.id.recyclerItensCat);
+    }
+
+    public List<ItemHome> popularLista(){
+        listaItens.add(new ItemHome(R.drawable.hq3, "Shrek"));
+        listaItens.add(new ItemHome(R.drawable.hq3, "Nois"));
+        listaItens.add(new ItemHome(R.drawable.hq3, "lalala"));
+
+        return listaItens;
     }
 }

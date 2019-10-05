@@ -25,9 +25,11 @@ public class ModeloHome implements Parcelable {
 
     //getters and setters
 
+
     protected ModeloHome(Parcel in) {
         nomePagina = in.readString();
         imagemCategoria = in.readInt();
+        listaItensHome = in.createTypedArrayList(ItemHome.CREATOR);
     }
 
     public static final Creator<ModeloHome> CREATOR = new Creator<ModeloHome>() {
