@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
 
-    tools:context=".CadastroActivity"
+    tools:context=".views.CadastroActivity"
     android:background="#E1001D">
 
 
