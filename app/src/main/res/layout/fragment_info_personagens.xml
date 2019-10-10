@@ -10,8 +10,9 @@
 
     <ImageView
         android:id="@+id/imageBannerPers"
-        android:layout_width="433dp"
-        android:layout_height="316dp"
+        android:layout_width="0dp"
+        android:layout_height="273dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/bannerPersonagem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
