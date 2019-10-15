@@ -1,12 +1,16 @@
 package com.example.meuuniversomarvel;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HomeActivity extends AppCompatActivity {
+import com.example.meuuniversomarvel.interfaces.RecyclerViewOnClick;
+
+public class HomeActivity extends AppCompatActivity implements RecyclerViewOnClick {
 
     private Button btnQuadrinhos;
     private Button btnPersonagens;
@@ -55,5 +59,13 @@ public class HomeActivity extends AppCompatActivity {
         btnQuadrinhos.findViewById(R.id.buttonQuadrinhos);
         btnSeries.findViewById(R.id.buttonSeries);
 
+    }
+
+    public void onClick(){
+//        Intent intent = new Intent( HomeActivity.this, com.example.meuuniversomarvel.views.InfoContainer.class);
+//        Bundle bundle = new Bundle();
+//        bundle.putParcelable();
+//        intent.putExtras(bundle);
+//        startActivity(intent);
     }
 }
