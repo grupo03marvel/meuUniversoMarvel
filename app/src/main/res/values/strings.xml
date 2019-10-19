@@ -6,6 +6,14 @@
     <string name="description">description</string>
 
     <string name="title_activity_recuperar__senha_email">Recuperar_SenhaEmail</string>
+    <string name="autoresNav">Autores</string>
+    <string name="personagensNavBottom">Personagens</string>
+    <string name="hqsNav">HQ\'s</string>
+    <string name="eventosNav">Eventos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="placeholderNomeItemCat">Título HQ</string>
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
