@@ -68,9 +68,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (Patterns.EMAIL_ADDRESS.matcher(email).matches() && !senha.isEmpty()){
                     startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                    textInputLogin.setError("O email digitado não é válido");
+                    textInputLogin.setError("O usuário digitado não é válido");
                     textInputLogin.setErrorEnabled(false);
-                    Snackbar.make(view, "O email digitado não é válido", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(view, "O usuário digitado não é válido", Snackbar.LENGTH_LONG).show();
                 } else if (senha.isEmpty()){
                     textInputSenha.setError("O campo senha deve ser preenchido");
                     textInputSenha.setErrorEnabled(false);
