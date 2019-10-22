@@ -18,7 +18,7 @@ public class splashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        //Luana
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
