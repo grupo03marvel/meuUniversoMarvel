@@ -96,11 +96,13 @@ public class HomeActivity extends AppCompatActivity implements Comunicador {
 
 
                 if (id == R.id.nav_sobre) {
-                    Intent intet = new Intent(HomeActivity.this, SobreActivity.class);
+                    Intent intent = new Intent(HomeActivity.this, SobreActivity.class);
+                    startActivity(intent);
                 }
 
                 if (id == R.id.nav_logout) {
                     Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                    startActivity(intent);
                 }
 
 
