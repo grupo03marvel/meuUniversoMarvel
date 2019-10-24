@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.SobreActivity">
+    android:background="#1E2D3E"
+    tools:showIn="@layout/appbar_main"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

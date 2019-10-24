@@ -1,4 +1,4 @@
-package com.example.meuuniversomarvel;
+package com.example.meuuniversomarvel.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.facebook.login.Login;
+import com.example.meuuniversomarvel.R;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class CadastroActivity extends AppCompatActivity {

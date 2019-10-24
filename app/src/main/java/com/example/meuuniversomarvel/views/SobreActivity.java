@@ -1,8 +1,10 @@
-package com.example.meuuniversomarvel;
+package com.example.meuuniversomarvel.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.meuuniversomarvel.R;
 
 public class SobreActivity extends AppCompatActivity {
 
